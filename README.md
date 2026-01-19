@@ -1,0 +1,1 @@
+Hello, this repository contains the files for ANA680 Assignments which involves retraining the model that uses the algorithm with the best accuracy result (XGBoost) using the breast cancer dataset (Breast_Canver_Data.csv), developing a Flask application from it, and deploying the model/application to a Heroku server. Please let me know if you have any questions. Thanks!
