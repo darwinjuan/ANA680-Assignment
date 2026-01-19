@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        form { display: inline-block; text-align: left; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+        input { margin-bottom: 10px; width: 250px; padding: 8px; }
+        button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        .result { margin-top: 20px; font-weight: bold; color: #d9534f; }
+    </style>
+</head>
+<body>
+
+    <h2>Breast Cancer Diagnostic Tool</h2>
+    <p>Enter the details for the top 4 correlated features:</p>
+
+    <form action="/predict" method="POST">
+        <label>Cell Size Uniformity (1-10):</label><br>
+        <input type="number" name="f1" step="1" min="1" max="10" required><br>
+        
+        <label>Cell Shape Uniformity (1-10):</label><br>
+        <input type="number" name="f2" step="1" min="1" max="10" required><br>
+        
+        <label>Bare Nuclei (1-10):</label><br>
+        <input type="number" name="f3" step="1" min="1" max="10" required><br>
+        
+        <label>Bland Chromatin (1-10):</label><br>
+        <input type="number" name="f4" step="1" min="1" max="10" required><br>
+        
+        <button type="submit">Predict Classification</button>
+    </form>
+
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+
+</body>
+</html>
